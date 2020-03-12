@@ -6,10 +6,7 @@ import { BlogListComponent } from './blog-list/blog-list.component';
 
 const routes: Routes = [
   { path: '', component: BlogListComponent },
-  {
-    path: ':slug',
-    component: BlogComponent,
-  }
+  { path: ':slug', component: BlogComponent }
 ];
 
 @NgModule({
