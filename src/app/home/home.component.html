@@ -1,1 +1,6 @@
 <p>home works!</p>
+
+<div *ngFor="let blog of blogs$ | async">
+    <p>{{blog.title}}</p>
+    <p>{{blog.description}}</p>
+</div>
