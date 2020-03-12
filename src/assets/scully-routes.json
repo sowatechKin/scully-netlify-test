@@ -1,1 +1,1 @@
-[{"route":"/blog"},{"route":"/"}]
+[{"route":"/blog"},{"route":"/blog/test-2","title":"Test","description":"Das ist nur ein Test!","sourceFile":"test-2.md"},{"route":"/"}]
