@@ -1,6 +1,6 @@
 <p>Bloglist works!</p>
 
-<div *ngFor="let blog of blogs$ | async" [routerLink]="[blog.route]">
+<div style="border: 1px solid black;" *ngFor="let blog of blogs$ | async" [routerLink]="[blog.route]">
     <p>{{blog.title}}</p>
     <p>{{blog.description}}</p>
 </div>
