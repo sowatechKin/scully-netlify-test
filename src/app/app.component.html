@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<header>
+    <div color="primary">
+        <p>
+            <span [routerLink]="['/']">ngScully Netlify CMS Starter</span>
+            <span class="spacer"></span>
+            <button mat-button [routerLink]="['/']">
+                <span>home</span> Home
+            </button>
+            <button mat-button [routerLink]="['/blog']">
+                <span>dehaze</span> Blog
+            </button>
+        </p>
+    </div>
+</header>
+
+
+<main>
+    <router-outlet></router-outlet>
+</main>
