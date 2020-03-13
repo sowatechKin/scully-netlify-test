@@ -32,6 +32,7 @@ collections: # A list of collections the CMS should be able to edit
           widget: "relation",
           collection: "categories",
           valueField: "title",
+          searchFields: "title",
           displayFields: "title",
           multiple: true,
         }
