@@ -5,7 +5,7 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { BlogComponent } from './blog.component';
 import { ScullyContentModule, ScullyLibModule } from '@scullyio/ng-lib';
 import { BlogListComponent } from './blog-list/blog-list.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [BlogComponent, BlogListComponent],
@@ -13,7 +13,8 @@ import { BlogListComponent } from './blog-list/blog-list.component';
     CommonModule,
     BlogRoutingModule,
     ScullyContentModule,
-    ScullyLibModule
+    ScullyLibModule,
+    HttpClientModule
   ]
 })
 export class BlogModule { }

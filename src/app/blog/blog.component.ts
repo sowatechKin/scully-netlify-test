@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { ScullyRoutesService } from '@scullyio/ng-lib';
+import { DataService } from '../data.service';
 
 @Component({
 	selector: 'app-blog',
@@ -10,8 +10,22 @@ import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 	encapsulation: ViewEncapsulation.Emulated
 })
 export class BlogComponent implements OnInit {
-	constructor() { }
-	ngOnInit(): void {
+	constructor(
+		private dataService: DataService,
+		private srs: ScullyRoutesService) { }
+
+	data: any;
+	async ngOnInit() {
+		await this.srs.getCurrent().subscribe((data) => {
+			this.loadData(data.sourceFile);
+		})
 	}
 
+	async loadData(file: string) {
+		try {
+			this.data = await this.dataService.getData("blog", file).toPromise();
+		} catch (error) {
+			console.log(error);
+		}
+	}
 }
