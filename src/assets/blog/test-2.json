@@ -2,6 +2,8 @@
   "title": "TEST",
   "description": "Das ist noch ein test!",
   "publish": true,
-  "body": "\n\n```typescript\nlet test = \"testString\";\n```",
-  "categories": "Test"
+  "body": "```typescript\nlet test = \"testString\";\n```",
+  "categories": [
+    "Test"
+  ]
 }
