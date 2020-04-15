@@ -23,7 +23,7 @@ export class BlogComponent implements OnInit {
 
 	async loadData(file: string) {
 		try {
-			this.data = await this.dataService.getData("blog", file).toPromise();
+			this.data = await this.dataService.getData("blog", file);
 		} catch (error) {
 			console.log(error);
 		}
